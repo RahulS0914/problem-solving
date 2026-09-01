@@ -1,1 +1,92 @@
+#DICTIONARY PROGRAMME: 
+
+#FIRST
+#add a key and value to dict
+my_dict={
+    1:10,
+    2:20}
+print("original dict is : ",my_dict)
+my_dict[3]=30
+print("new dict is : ",my_dict)
+
+#SECOND
+#concatenate the dict to create new one
+dist1={1:10, 2:20, 3:30}
+dist2={4:40 ,5:50, 6:60}
+dist3={7:70, 8:80, 9:90}
+new_dist={}
+new_dist.update(dist1)
+new_dist.update(dist2)
+new_dist.update(dist3)
+print("first dist is : ",dist1)
+print("second dist is : ",dist2)
+print("third dist is : ",dist3)
+print("merged dist is : ",new_dist)
+
+#THIRD
+#to check given key alrdy exists is dict
+"""my_dict={1:"raman", 2:"rahul", 3:"rohit", 4:"palak"}
+key=int(input("enter key to check: "))
+if key in my_dict:
+    print("key exists in dict")
+else:
+    print("key doesn't exists in dict")"""
+
+#FORTH
+#iterate to dict
+my_dict={
+    1:"raman",
+    2:"rahul",
+    3:"rohit",
+    4:"palak",
+    5:"rakshit",
+    6:"abhijith",
+}
+for key in my_dict:
+    print("keys are : ",key)
+for value in my_dict.values():
+    print("values are: ",value)
+for key,value in my_dict.items():
+    print("key:value is= ",key,value)
+
+#FIFTH
+#prepare dict keys are num beth 1-15 and values are its sq
+my_dict={}
+for i in range(1,16):
+    my_dict[i]=i**2
+print("dict is : ",my_dict)
+
+#SIXTH
+#sum of all value in dict
+my_dict={"a":10, "b":20, "c":30, "d":40}
+total=0
+for value in my_dict.values():
+    total=total+value
+print("sum of all value is : ",total)
+
+#SEVENTH
+my_dict={
+    "name":"Rahul",
+    "adress":"Sai rudra residency b wimg",
+    "prn_number":1272261082,
+    "mother_tongue":"maithili"}
+print("student information : ",my_dict)
+my_dict["age"]=19
+print(my_dict)
+del my_dict["prn_number"]
+print(my_dict)
+for key,value in my_dict.items():
+    print(key,value)
+
+#EIGHTH
+#mean of marks
+MARKS={
+    "marks1":65,
+    "marks2":68,
+    "marks3":54,
+    "marks4":61,
+    "marks5":60}
+total=sum(MARKS.values())
+mean=total/len(my_dict)
+print(mean)
 
