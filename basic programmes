@@ -1,1 +1,200 @@
+#to print hlo world
+
+print("Hello World!")
+
+#largest of three number
+
+a=float(input("enter a: "))
+b=float(input("enter b : "))
+c=float(input("enter c : "))
+if a>=b and a>=c:
+    if a==b:
+        print("greater number is a and b : ",a)
+    else:
+            print("greater numbr is a: ",a)
+elif b>=a and b>=c:
+    if b==c:
+        print("greater number is b and c : ",b)
+    else:
+            print("greater number is b : ",b)
+else:
+    print("greater number is c : ",c)
+
+#sum of two number
+
+a=int(input("enter a : "))
+b=int(input("enter b: "))
+sum=a+b
+print("sum is : ",sum)
+
+#number is even or odd
+a=int(input("enter a : "))
+if a%2==0:
+    print("even")
+else:
+    print("odd")
+
+
+#calculator programme
+
+a=int(input("enter number : "))
+b=int(input("enter number : "))
+print("choose an operation : 1.add , 2.sub , 3.multiply , 4.divison")
+choice=int(input("choose(1-4): "))
+if choice==1:
+    print("sum is : ",a+b)
+elif choice==2:
+    print("sub is : ",a-b)
+elif choice==3:
+    print("Xplication is : ",a*b)
+elif choice==4:
+    if b!=0:
+        print("division is : ",a/b)
+    else:
+        print("error")
+else:
+    print("yahoooooo")
+
+
+#check whether number is +ve or -ve
+
+a=int(input("enter a : "))
+if a>0:
+    print("number is +ve")
+elif a<0:
+    print("number is -ve")
+else:
+    print("number is zero")
+
+
+#sum of digits of a number
+
+a=int(input("enter a : "))
+sum=0
+while a>0:
+    s1=a%10
+    sum=sum+s1
+    a=a//10
+print("sum of digit is : ",sum)
+
+
+#factorial of number
+
+a=int(input("enter number : "))
+factorial=1
+for i in range(1,a+1):
+    factorial=factorial*i
+print("factorial is : ",factorial)
+
+
+#check number is prime or not
+
+a=int(input("enter a : "))
+for i in range(2,a):
+    if a%i==0:
+        print("not prime")
+        break
+else:
+ print("prime no")
+
+#print prime number betn 10-99
+
+for num in range(10,99):
+    count=0
+    for i in range(1,num+1):
+      if num%i==0:
+         count=count+1
+
+    if count==2:
+        print(num)
+
+
+#check for leap year
+
+year=int(input("enter year : "))
+if year%400==0:
+    print("leap year")
+elif year%100==0:
+    print("not leap year")
+elif year%4==0:
+    print("leap year")
+else:
+    print("not leap year")
+
+
+#display cube of 5 number
+
+for i in range(5):
+    a=int(input("enter number: "))
+    cube=a**3
+    print("cube is : ",cube)
+
+
+#reverse the number
+
+a=int(input("enter number: "))
+reverse=0
+while a>0:
+    s1=a%10
+    reverse=reverse*10+s1
+    a=a//10
+print("reverse number is : ",reverse)
+
+
+#accept math marks and assign grade:
+
+math_mark=float(input("enter your math marks: "))
+print("math marks is : ",math_mark)
+if math_mark>=90 and math_mark<=100:
+    print("grade is : O")
+elif math_mark>=80 and math_mark<=89:
+    print("grade is A+")
+elif math_mark>=70 and math_mark<=79:
+    print("grade is A")
+elif math_mark>=60 and math_mark<=69:
+    print("grade is B")
+elif math_mark>=50 and math_mark<=59:
+    print("grade is C")
+elif math_mark>=40 and math_mark<=49:
+    print("grade is P")
+else:
+    print("fail")
+
+#program to print the statement
+
+Student_Name=input("enter name: ")
+Address=input("enter address: ")
+contact_number=int(input("enter number: "))
+mother_tongue=input("enter language")
+school_name=input("enter school name: ")
+year=int(input("enter year : "))
+panel=input("enter panel: ")
+roll_no=int(input("enter roll number: "))
+
+print(Student_Name)
+print(Address)
+print(contact_number)
+print(mother_tongue)
+print(school_name)
+print(year)
+print(panel)
+print(roll_no)
+
+
+#take 3 sub marks,print %age,maximum marks in subject
+
+math=float(input("enter math marks : "))
+phy=float(input("enter phy marks : "))
+chem=float(input("enter chem marks: "))
+print("maths marks is: ",math)
+print("phy marks is: ",phy)
+print("chem marks is : ",chem)
+percentage=(math+phy+chem)/3
+print("%age is : ",percentage)
+if math>=chem and math>=phy:
+    print("math has highest marks")
+elif phy>=math and phy>=chem:
+    print("phy has highest marks")
+else:
+    print("chem has highest marks")
 
