@@ -1,1 +1,53 @@
+#TUPLE PROGRAMMES
 
+#first
+numbers=(10,20,30,40,50,60,70,80,90)
+print("forth number from starting is : ",numbers[3])
+print("forth number from end is : ",numbers[-4])
+
+#second
+#check elements in tuple
+numbers=(10,20,30,40,50)
+element=int(input("enter element: "))
+if element in numbers:
+    print("number present in tuple")
+else:
+    print("element doesn't exist in tuple")
+
+#third
+#convert list in tuple
+list_number=[10,20,30,40,50]
+tuple_number=tuple(list_number)
+print("list is : ",list_number)
+print("tuple is : ",tuple_number)
+
+#forth: to find index in tuple
+numbers=(10,20,30,40,50)
+element=int(input("enter element: "))
+if element in numbers:
+    print("index of element is : ",numbers.index(element))
+
+#fifth:
+#replace last value of tuple in list by 100
+
+numbers=[(10,20,30),(40,50,60),(70,80,90)]
+new_list=[]
+for tup in numbers:
+    new_tuple=tup[:-1]+(100,)
+    new_list.append(new_tuple)
+print("original list is : ",numbers)
+print("updated list is : ",new_list)
+
+#sixth
+#to find maxi and mini number in tuple
+numbers=(65,89,12,74,35)
+maximum=max(numbers)
+minimum=min(numbers)
+print("minimum number is : ",minimum)
+print("maximum number is : ",maximum)
+
+#seventh: to swap the tuple
+numbers=(10,20,30,40,50,60)
+reverse_tuple=(numbers[-1],)+numbers[1:-1]+(numbers[0],)
+print("original tuple is : ",numbers)
+print("reverse tuple is : ",reverse_tuple)
