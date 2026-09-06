@@ -1,0 +1,171 @@
+#list of num1
+num1=[10,20,30,40,50]
+print("list is : ",num1)
+print("index(0):first number is : ",num1[0])
+print("index(1),second number is : ",num1[1])
+print("index(2),third num is : ",num1[2])
+print("index(3),forth number is : ",num1[3])
+print("index(4),fifth number is : ",num1[4])
+
+#adding a new num in list 
+num1.append(60)
+print("index(5),sixth number is : ",num1[5])
+print("new list is : ",num1)
+
+#to reverse a list
+num1.reverse()
+print("reverse list is : ",num1)
+
+#counting occurence of an element
+num2=[10,10,20,20,20,30,30]
+element=int(input("enter number : "))
+count=num2.count(element)
+print("number of occurance is : ",count)
+
+#adding one list in front of another list
+list1=[10,20,30]
+list2=[40,50,60]
+list1=list2+list1
+print("new list is : ",list1)
+print("list2 is : ",list2)
+
+#inserting a value into a list
+num=[10,20,30,40,50]
+print(num)
+num.insert(2,25)  #(index , value)
+print("new list is :",num)
+
+
+#remove an element using its index
+num=[10,20,30,40,50]
+print(num)
+index=int(input("enter index to remove : "))
+num.pop(index)
+print("new list is : ",num)
+
+#Q.)accept 10 values from user:
+numbers=[]
+for i in range(10):
+    num=int(input("enter number: "))
+    numbers.append(num)
+    print("list is : ",numbers)
+# i)count similar elements and print list
+if numbers.count(numbers[i])>1:   
+    print("duplicat numbers are : ",numbers[i])
+for j in range(10):
+    if numbers[j]==numbers[i]:
+        print("index are: ",j)
+
+# ii)count even odd values if list:
+even=0
+odd=0
+for value in numbers:
+    if value%2==0:
+       even=even+1
+    else:
+       odd=odd+1
+print("even: ",even)
+print("odd: ",odd)
+
+# iii)count positive and negative number
+positive=0
+negative=0
+zero=0
+for value in numbers:
+    if value>0:
+        positive+=1
+    elif value==0:
+        zero+=1
+    else:
+        negative+=1
+print("+ve numbers are: ",positive)
+print("-ve numbers are : ",negative)
+print("number of zeros are: ",zero)
+
+# Q)accept 10 values from user:
+numbers=[]
+for i in range(10):
+    num=int(input("enter number : "))
+    numbers.append(num)
+print("List is : ",numbers)
+
+#sort list in ascending ordr and display it:
+ascending=sorted(numbers)
+print("ascending ordr is :",ascending)
+
+#descending ordr:
+numbers.sort(reverse=True)
+print("descending ordr is : ",numbers)
+
+#display length of list
+print("length of list is: ",len(numbers))
+
+#Q) accept two list and merge into singal list:
+list1=[]
+for i in range(4):
+    num=int(input("enter number: "))
+    list1.append(num)
+print("List1 is : ",list1)
+
+list2=[]
+for i in range(3):
+    num=int(input("enter number: "))
+    list2.append(num)
+print("List2 is : ",list2)
+
+merged_list=list1+list2
+print("merged list is: ",merged_list)
+
+#Q)12 Acronym
+phrase=input("enter phrase: ")
+words=phrase.split()
+acronym=""
+for word in words:
+    acronym=acronym+word[0]
+    print("acronym: ",acronym.upper())
+
+#Q)display abbreviation of mnth
+months=["jan","feb","mar","apr","may","june","july","aug","sep","oct","nov","dec"]
+mnth_num=int(input("enter number: "))
+if mnth_num>=1 and mnth_num<=12:
+    print("month abbreviation is: ",months[mnth_num-1])
+else:
+    print("hulalalal")
+
+#Q)programme to insert delete and display list
+numbers=[10,20,30,40]
+print("List is: ",numbers)
+numbers.insert(4,50)
+print("new list: ",numbers)
+numbers.pop(4)
+print("list aftr deleting element: ",numbers)
+
+#Q)merge two list into dict
+keys=[1,2,3,4]
+values=["raman","rahul","rohit","raushan"]
+student_dict=dict(zip(keys,values))
+print("student dict is : ",student_dict)
+
+#Q)to remove duplicate element from list
+numbers=[1,1,2,2,2,3,4,5]
+u=list(set(numbers))
+print(u)
+
+#Q)to find commnon element in two list
+list1=[10,20,30,40]
+list2=[30,40,50,60]
+common=[]
+for value in list1:
+    if value in list2:
+        common.append(value)
+print("list1 is : ",list1)
+print("list2 is : ",list2)
+print("commnon element is : ",common)    
+    
+    
+
+
+    
+
+
+
