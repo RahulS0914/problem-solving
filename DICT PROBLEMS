@@ -90,3 +90,45 @@ total=sum(MARKS.values())
 mean=total/len(my_dict)
 print(mean)
 
+my_dict={
+"name":"ABC",
+"panel":"B",
+"rollno":34,
+"marks":[65,87,67,94]
+}
+sorted_dict=sorted(my_dict)
+print("sorted keys: ",sorted_dict)
+
+#
+student_dict={
+    "rahul":94,
+    "rohit":90,
+    "raman":98,
+    "abhijith":84
+}
+highest_student=max(student_dict,key=student_dict.get)
+print("student with highest marks: ",highest_student)
+print("highest marks: ",student_dict[highest_student])
+
+#count the freq of each element in list using dict:
+numbers=[10,20,10,30,20,30,40,30,40]
+frequency={}
+for value in numbers:
+    if value in frequency:
+        frequency[value]+=1
+    else:
+        frequency[value]=1
+print("freq of element: ",frequency)
+
+#to sort dict by its values
+my_dict={
+    "rahul":94,
+    "rohit":90,
+    "raman":98,
+    "abhijith":84,
+}
+sorted_dict=dict(sorted(my_dict.items(),key=lambda item:item[1]))
+print("dict sorted by values: ",sorted_dict)
+sorted_dict=dict(sorted(my_dict.items(),key=lambda item:item[1],reverse=True))
+print(sorted_dict)
+
