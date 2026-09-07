@@ -198,3 +198,43 @@ elif phy>=math and phy>=chem:
 else:
     print("chem has highest marks")
 
+#Nested if:
+score=85
+attendence=92
+if score>=70:
+    print("student passed the exam")
+    if attendence>=90:
+        print("student also has excellent attendence")
+    else:
+        print("student attendence could be improved")
+else:
+    print("student didn't pass the exam")
+
+
+a=int(input("enter a: "))
+table=""
+for i in range(1,11):
+    table=a*i
+    print(table)
+
+#while loop:
+count=0
+while count<5:
+    print(count)
+    count+=1
+
+#nested loop:
+adj=["red","big","tasty"]
+fruits=["apple","cherry","banana"]
+for x in adj:
+    for y in fruits:
+        print(x,y)
+
+#
+for i in range(10):
+    if i==5:
+        break
+    print(i)
+
+
+
