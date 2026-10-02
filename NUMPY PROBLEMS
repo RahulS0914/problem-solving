@@ -1,0 +1,178 @@
+#0D array
+import numpy as np
+arr=np.array([42])
+print(arr)
+
+
+#1D array:
+import numpy as np
+arr=np.array([1,2,3,4])
+print(arr)
+
+
+#2D array
+import numpy as np
+arr=np.array([[1,2,3],[4,5,6]])
+print(arr)
+
+#3D array
+import numpy as np
+arr=np.array([[[1,2,3],[4,5,6]],[[1,2,3],[4,5,6]]])
+print(arr)
+
+
+#.ndim tells us how many dimensions the array have
+import numpy as np
+a=np.array(43)
+b=np.array([1,2,3,4])
+c=np.array([[1,2,3],[4,5,6]])
+d=np.array([[[1,2,3],[4,5,6]],[[1,2,3],[4,5,6]]])
+print(a.ndim)
+print(a.ndim)
+print(b.ndim)
+print(c.ndim)
+print(d.ndim)
+
+
+#printing element with index
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[0])
+print(arr[1])
+print(arr[2])
+print(arr[3])
+
+
+#add third and forth element of array with index
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[2]+arr[3])
+
+
+#accesss 2D array
+import numpy as np
+arr=np.array([[1,2,3,4,5],[6,7,8,9,10]])
+print(arr)
+print("second element of first rrow is : ",arr[0,1])   #0 is first row
+                                                       #1 is index of second element
+
+
+#slicing operation
+#passing value from one index to another index
+#slice elemennt from index 1 to 5
+import numpy as np
+arr=np.array([1,2,3,4,5,6,7])
+print(arr[1:5])
+
+
+#when only end index is given
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[:5])
+
+
+#when no index is given
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[:])
+
+
+#slice element from index 4 to end of the array
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[4:])
+
+
+#slice element from beginning to index 4
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[:5])
+
+
+#-ve slicing(start from backward)
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[-3:-1])
+
+
+#STEP
+#use step value to determine the step of the slicing
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[1:5:2])
+
+
+#return everyy other element from the etire array
+import numpy as np
+arr=np.array([1,2,3,4,5,6])
+print(arr[::2])
+
+
+#slicing 2D array
+#from 2nd element slice element from index 1 to 4
+import numpy as np
+arr=np.array([[1,2,3,4,5],[6,7,8,9,10]])
+print(arr[1,1:4])
+
+
+#display 2nd row 3rd element
+import numpy as np
+arr=np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(arr[1,2])
+
+
+#row slice
+import numpy as np
+arr=np.array([[1,2,3],[4,5,6],[7,8,9]])
+row_slicer=arr[0:2,:]
+print(row_slicer)
+
+
+#
+import numpy as np
+arr=np.array([[1,2,3],[4,5,6],[7,8,9]])
+col_slice=arr[:,1:3]  #select all row column from index 1 to 2
+print(col_slice)
+# : in the row position means select all row
+# 1:3 indicates column from index 1 upto index 3
+
+
+#Sum of 2 matrix
+#Create two matrices using nested list
+matrix1=[
+[1,2,3],
+[4,5,6]
+]
+matrix2=[
+[7,8,9],
+[10,11,12]
+]
+
+#initialise a result matrix with the same size
+result=[
+[0,0,0],
+[0,0,0]
+]
+#perform matrix addition
+for i in range(len(matrix1)):   #loop through rows
+    for j in range(len(matrix1[0])):  #loop throuugh columns
+        result[i][j]=matrix1[i][j]+matrix2[i][j]
+#display the result
+print("Matrix1: ")
+for row in matrix1:
+    print(row)
+print("Matrix 2: ")
+for row in matrix2:
+    print(row)
+print("Sum of matrix1 and matrix2 is: ")
+for row in result:
+    print(row)
+
+
+
+
+
+
+
+
+
