@@ -1,0 +1,146 @@
+#pandas
+#creating a series from list
+import pandas as pd
+a=[1,7,2]
+myvar=pd.Series(a)
+print(myvar)
+
+#create labels with the index argument you can name your own labels:
+import pandas as pd
+a=[1,7,2]
+myvar=pd.Series(a,index=["x","y","z"])
+print(myvar)
+
+
+import pandas as pd
+s1=pd.Series([10,20,30],index=["x","y","z"],name="example series")
+print(s1)
+
+
+import pandas as pd
+calories={"day1":420,
+"day2":300,
+"day3":320,
+}
+myvar=pd.Series(calories)
+print(myvar)
+
+
+import pandas as pd
+s1=pd.Series({"day1":420,"day2":300,"day3":320})
+print(s1)
+
+
+#data frames: it is a whole table
+import pandas as pd
+data={"calories":[420,200,300],
+"duration":[40,50,45],
+}
+myvar=pd.DataFrame(data)
+print(myvar)
+
+
+import pandas as pd
+data={"calories":[420,200,300],
+"duration":[40,50,45],
+}
+myvar=pd.DataFrame(data)
+print(myvar.loc[0])
+
+
+import pandas as pd
+data={"calories":[420,200,300],
+"duration":[40,50,45],
+}
+myvar=pd.DataFrame(data)
+print(myvar.loc[[0,1]])
+
+
+import pandas as pd
+data={"calories":[420,200,300],
+"duration":[40,50,45],
+}
+df=pd.DataFrame(data,index=["day1","day2","day3"])
+print(df)
+
+
+#data cleaning and preprocessing using pandas:
+import pandas as pd
+#define a dict with sample data which includes some missing values
+data={
+"A":[1,2,3,None,5],
+"B":[None,2,3,4,5],
+"C":[1,2,None,None,5],
+}
+df=pd.DataFrame(data)
+print("original list: \n",df)
+
+#use dropna to remove rows with any missing values
+df_clean=df.dropna()
+print(df_clean)
+
+
+#to fill the missing value in pandas we use fillna()
+import pandas as pd
+data={
+"A":[1,2,3,None,5],
+"B":[None,2,3,4,5],
+"C":[1,2,None,None,5],
+}
+df=pd.DataFrame(data)
+print("original list: ",df)
+
+#filling none values with 0
+new_df=df.fillna(0,inplace=False)
+print(new_df)
+
+
+#use aggregate function to fill the missing values
+import pandas as pd
+data={
+"A":[1,2,3,None,5],
+"B":[None,2,3,4,5],
+"C":[1,2,None,None,5],
+}
+df=pd.DataFrame(data)
+print("original list: ",df)
+
+#filling none value with the mean of each column
+new_df=df.fillna(df.mean(),inplace=False)
+print(new_df)
+
+
+#Handle duplicate values
+import pandas as pd
+#sample data
+data={"A":[1,2,2,3,3,4],
+      "B":[5,6,6,7,8,8],
+}
+
+df=pd.DataFrame(data)
+print("Original df: \n",df.to_string(index=False))
+
+#detect duplicates
+print("duplicate rows: \n",df[df.duplicated()].to_string(index=False))
+
+#remove duplicates based on coln A
+df.drop_duplicates(subset=["A"],keep="first",inplace=True)
+print("df after removing duplicates based on coln A: \n",df.to_string(index=False))
+
+
+import pandas as pd
+data={"A":[25,30,35],
+      "B":["Rohit","Rahul","Raman"],
+      "C":[50000,60000,70000]
+}
+
+df=pd.DataFrame(data)
+
+print(df)
+print()
+
+#rename column
+df.rename(columns={"A":"Age","B":"Name","C":"Salary"},inplace=True)
+print(df.to_string(index=False))
+
+
